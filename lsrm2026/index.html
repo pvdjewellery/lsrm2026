@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LSRM-2026 | International Conference on Indian Knowledge System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #800020;
+      --primary-dark: #500014;
+      --gold: #D4AF37;
+      --gold-light: #F4E8C1;
+      --dark: #1A1A1A;
+      --light-bg: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --text: #333333;
+      --text-muted: #666666;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #FFFFFF;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .hero-code {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 25px;
+      color: #E0E0E0;
+    }
+
+    .hero-meta {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .organizers {
+      background: var(--gold-light);
+      color: var(--dark);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .organizers b {
+      color: var(--primary-dark);
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 10px auto 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid #EAEAEA;
+    }
+
+    .card h3 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      margin-bottom: 15px;
+      border-bottom: 2px solid var(--gold-light);
+      padding-bottom: 8px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .highlight-item {
+      background: var(--light-bg);
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      border-left: 3px solid var(--gold);
+    }
+
+    .themes-list {
+      list-style: none;
+    }
+
+    .themes-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .themes-list .num {
+      background: var(--primary);
+      color: #FFF;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .guideline-item {
+      margin-bottom: 15px;
+    }
+
+    .guideline-item h5 {
+      color: var(--primary);
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #EAEAEA;
+    }
+
+    th {
+      background: var(--primary);
+      color: #FFF;
+    }
+
+    .payment-box {
+      background: var(--light-bg);
+      border: 1px dashed var(--primary);
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    .payment-box h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .payment-box p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: var(--primary);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 20px;
+      transition: background 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .contact-list li a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .map-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #FFF;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-badge">HYBRID MODE (ONLINE & OFFLINE)</div>
+    <h1>INTERNATIONAL CONFERENCE</h1>
+    <div class="hero-code">LSRM-2026</div>
+    <p class="hero-subtitle">
+      Literature, Social Sciences, Regional Studies & Management Practices on <strong>Indian Knowledge System</strong>
+    </p>
+    <div class="hero-meta">
+      <span>📍 The Lotus County Club & Resort, Udaipur, Rajasthan</span>
+      <span>📅 25th – 26th September, 2026</span>
+    </div>
+  </header>
+
+  <div class="organizers">
+    Organized by <b>IQAC, VNSB Ltd Arts & Commerce College, Vadnagar</b> & <b>Shri V. R. Patel College of Commerce, Mehsana</b>
+  </div>
+
+  <!-- ABOUT & THEMES -->
+  <section class="section">
+    <div class="grid-2">
+      <div class="card">
+        <h3>About the Conference</h3>
+        <p>The International Conference LSRM-2026 aims to foster research from diverse cultural backgrounds, welcoming participation from educators, scholars, industrialists, and policymakers. In alignment with NEP 2020, it provides a platform for interdisciplinary discussions on the Indian Knowledge System.</p>
+        
+        <h4 style="margin-top:20px; color:var(--primary);">Key Highlights</h4>
+        <div class="highlights-grid">
+          <div class="highlight-item">International Platform</div>
+          <div class="highlight-item">Keynote Speakers</div>
+          <div class="highlight-item">ISSN Proceedings</div>
+          <div class="highlight-item">E-Certificates</div>
+          <div class="highlight-item">Hybrid Mode</div>
+          <div class="highlight-item">Networking</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Themes & Focus Areas</h3>
+        <ul class="themes-list">
+          <li><span class="num">1</span>Indian Knowledge System: Philosophy & Culture</li>
+          <li><span class="num">2</span>Sustainable Development & Environment</li>
+          <li><span class="num">3</span>Education, NEP 2020 & Innovations</li>
+          <li><span class="num">4</span>Digital Transformation, AI & Tech</li>
+          <li><span class="num">5</span>Entrepreneurship & Startups</li>
+          <li><span class="num">6</span>Inclusive Growth & Social Justice</li>
+          <li><span class="num">7</span>Governance, Ethics & Public Policy</li>
+          <li><span class="num">8</span>Indian Legal Traditions & Cyber Law</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION, FEES & PAYMENT -->
+  <section class="section" style="background: #F0ECE1;">
+    <h2 class="section-title">Registration & Payment</h2>
+    <div class="grid-2">
+      
+      <div class="card">
+        <h3>1. Registration Fees</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Offline</th>
+              <th>Online</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Students / Scholars</td>
+              <td>₹2,500</td>
+              <td>₹1,100</td>
+            </tr>
+            <tr>
+              <td>Academicians</td>
+              <td>₹3,100</td>
+              <td>₹2,500</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 10px; font-size: 0.85rem; color: var(--text-muted);">
+          *Accommodation (optional): ₹2,500 extra.
+        </p>
+
+        <div class="payment-box">
+          <h4>Bank Details for Payment (UPI / NEFT)</h4>
+          <p><strong>Account Name:</strong> Principal, VNSB Ltd Arts & Commerce College</p>
+          <p><strong>Bank Name:</strong> </p>
+          <p><strong>Account No:</strong> </p>
+          <p><strong>IFSC Code:</strong> </p>
+          <p><strong>UPI ID:</strong> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>2. How to Register</h3>
+        <div class="guideline-item">
+          <h5>STEP 1: MAKE PAYMENT</h5>
+          <p>Pay the registration fee using the UPI/Bank details provided on the left. Save the payment screenshot and note the 12-digit UTR/Transaction ID.</p>
+        </div>
+
+        <div class="guideline-item">
+          <h5>STEP 2: FILL REGISTRATION FORM</h5>
+          <p>Click the button below to complete the Google Form, upload your payment screenshot, and submit your paper details.</p>
+        </div>
+
+        <div class="guideline-item">
+          <h5>STEP 3: SUBMIT FULL PAPER</h5>
+          <p>Send your research paper (MS Word) directly to <a href="mailto:accvad2026@gmail.com" style="color:var(--primary); font-weight:600;">accvad2026@gmail.com</a> before September 10, 2026.</p>
+        </div>
+
+        <!-- PASTE YOUR GOOGLE FORM LINK IN THE HREF BELOW -->
+        <a href="https://docs.google.com/spreadsheets/d/1VGfJWD0uDpBS85mdObOUljVcbEfnUWGmimk8g0vigrM/edit?usp=drivesdk" target="_blank" class="cta-btn">
+          Complete Registration & Upload Proof →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VENUE & CONTACT -->
+  <section class="section">
+    <h2 class="section-title">Venue & Contact</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Conference Venue</h3>
+        <h4>The Lotus County Club & Resort</h4>
+        <p>Ranpur-Chanrasa, Debari, Badi, Udaipur – 313024, Rajasthan, India</p>
+        <a class="map-btn" href="https://maps.google.com" target="_blank">Get Directions</a>
+      </div>
+
+      <div class="card">
+        <h3>Help & Queries</h3>
+        <p><strong>Paper Submissions:</strong> accvad2026@gmail.com</p>
+        <h4 style="margin-top: 15px;">Helpline Numbers:</h4>
+        <ul class="contact-list">
+          <li><a href="tel:+919737985889">+91 97379 85889</a></li>
+          <li><a href="tel:+919724813483">+91 97248 13483</a></li>
+          <li><a href="tel:+919265644542">+91 92656 44542</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
