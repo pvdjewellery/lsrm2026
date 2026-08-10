@@ -1,439 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LSRM-2026 | International Conference on Indian Knowledge System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --primary: #800020;
-      --primary-dark: #500014;
-      --gold: #D4AF37;
-      --gold-light: #F4E8C1;
-      --dark: #1A1A1A;
-      --light-bg: #FAF8F5;
-      --card-bg: #FFFFFF;
-      --text: #333333;
-      --text-muted: #666666;
-      --font-heading: 'Cinzel', serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Conference on Next-Gen GST Reforms | HNGU Patan</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --accent: #d69e2e;
+            --bg-light: #f7fafc;
+            --text-dark: #2d3748;
+            --white: #ffffff;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    body {
-      font-family: var(--font-body);
-      color: var(--text);
-      background-color: var(--light-bg);
-      line-height: 1.6;
-    }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
-    .hero {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #FFFFFF;
-      padding: 60px 20px 40px;
-      text-align: center;
-    }
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-    .hero-badge {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--dark);
-      font-weight: 700;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-    }
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
-    .hero h1 {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: var(--gold-light);
-      margin-bottom: 10px;
-      line-height: 1.2;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
 
-    .hero-code {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    .hero-subtitle {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto 25px;
-      color: #E0E0E0;
-    }
+        nav a:hover {
+            color: var(--accent);
+        }
 
-    .hero-meta {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--gold-light);
-      border-top: 1px solid rgba(212, 175, 55, 0.3);
-      padding-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(26, 54, 93, 0.88), rgba(43, 108, 176, 0.88)), url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&q=80') center/cover;
+            color: var(--white);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
 
-    .organizers {
-      background: var(--gold-light);
-      color: var(--dark);
-      padding: 20px;
-      text-align: center;
-      font-size: 0.95rem;
-      border-bottom: 3px solid var(--gold);
-    }
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-    .organizers b {
-      color: var(--primary-dark);
-    }
+        .badges {
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
 
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
 
-    .section-title {
-      font-family: var(--font-heading);
-      color: var(--primary);
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 40px;
-      position: relative;
-    }
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: #e2e8f0;
+        }
 
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: var(--gold);
-      margin: 10px auto 0;
-    }
+        .date-location {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: 8px;
-      padding: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      border: 1px solid #EAEAEA;
-    }
+        .cta-btn:hover {
+            background: #b7791f;
+            color: var(--white);
+            transform: translateY(-2px);
+        }
 
-    .card h3 {
-      font-family: var(--font-heading);
-      color: var(--primary);
-      margin-bottom: 15px;
-      border-bottom: 2px solid var(--gold-light);
-      padding-bottom: 8px;
-    }
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
 
-    .highlights-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 10px;
-      margin-top: 15px;
-    }
+        section {
+            margin-bottom: 3.5rem;
+        }
 
-    .highlight-item {
-      background: var(--light-bg);
-      padding: 10px 15px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-      border-left: 3px solid var(--gold);
-    }
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .themes-list {
-      list-style: none;
-    }
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-    .themes-list li {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 12px;
-      font-size: 0.95rem;
-    }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
 
-    .themes-list .num {
-      background: var(--primary);
-      color: #FFF;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin-right: 12px;
-      flex-shrink: 0;
-    }
+        .card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary);
+        }
 
-    .guideline-item {
-      margin-bottom: 15px;
-    }
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
 
-    .guideline-item h5 {
-      color: var(--primary);
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-    }
+        /* Dates Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-    th, td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #EAEAEA;
-    }
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+        }
 
-    th {
-      background: var(--primary);
-      color: #FFF;
-    }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
 
-    .payment-box {
-      background: var(--light-bg);
-      border: 1px dashed var(--primary);
-      padding: 20px;
-      border-radius: 6px;
-      margin-top: 20px;
-    }
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
 
-    .payment-box h4 {
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .payment-box p {
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-    }
-
-    .cta-btn {
-      display: block;
-      width: 100%;
-      background: var(--primary);
-      color: #FFFFFF;
-      text-align: center;
-      padding: 14px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-top: 20px;
-      transition: background 0.2s ease;
-    }
-
-    .cta-btn:hover {
-      background: var(--primary-dark);
-    }
-
-    .contact-list {
-      list-style: none;
-      margin-top: 10px;
-    }
-
-    .contact-list li a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .map-btn {
-      display: inline-block;
-      background: var(--primary);
-      color: #FFF;
-      padding: 10px 20px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      margin-top: 15px;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7rem; }
+            nav ul { display: none; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-badge">HYBRID MODE (ONLINE & OFFLINE)</div>
-    <h1>INTERNATIONAL CONFERENCE</h1>
-    <div class="hero-code">LSRM-2026</div>
-    <p class="hero-subtitle">
-      Literature, Social Sciences, Regional Studies & Management Practices on <strong>Indian Knowledge System</strong>
-    </p>
-    <div class="hero-meta">
-      <span>📍 The Lotus County Club & Resort, Udaipur, Rajasthan</span>
-      <span>📅 25th – 26th September, 2026</span>
-    </div>
-  </header>
-
-  <div class="organizers">
-    Organized by <b>IQAC, VNSB Ltd Arts & Commerce College, Vadnagar</b> & <b>Shri V. R. Patel College of Commerce, Mehsana</b>
-  </div>
-
-  <!-- ABOUT & THEMES -->
-  <section class="section">
-    <div class="grid-2">
-      <div class="card">
-        <h3>About the Conference</h3>
-        <p>The International Conference LSRM-2026 aims to foster research from diverse cultural backgrounds, welcoming participation from educators, scholars, industrialists, and policymakers. In alignment with NEP 2020, it provides a platform for interdisciplinary discussions on the Indian Knowledge System.</p>
-        
-        <h4 style="margin-top:20px; color:var(--primary);">Key Highlights</h4>
-        <div class="highlights-grid">
-          <div class="highlight-item">International Platform</div>
-          <div class="highlight-item">Keynote Speakers</div>
-          <div class="highlight-item">ISSN Proceedings</div>
-          <div class="highlight-item">E-Certificates</div>
-          <div class="highlight-item">Hybrid Mode</div>
-          <div class="highlight-item">Networking</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Themes & Focus Areas</h3>
-        <ul class="themes-list">
-          <li><span class="num">1</span>Indian Knowledge System: Philosophy & Culture</li>
-          <li><span class="num">2</span>Sustainable Development & Environment</li>
-          <li><span class="num">3</span>Education, NEP 2020 & Innovations</li>
-          <li><span class="num">4</span>Digital Transformation, AI & Tech</li>
-          <li><span class="num">5</span>Entrepreneurship & Startups</li>
-          <li><span class="num">6</span>Inclusive Growth & Social Justice</li>
-          <li><span class="num">7</span>Governance, Ethics & Public Policy</li>
-          <li><span class="num">8</span>Indian Legal Traditions & Cyber Law</li>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">HNGU Conference 2026</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#dates">Important Dates</a></li>
+            <li><a href="#fees">Fees</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header>
+        <div class="header-content">
+            <div class="badges">In Association with Gujarat State Tax Dept & MSME DIC</div>
+            <h1>Two-Days Collaborative National Conference</h1>
+            <h2>Impact of Next-Generation GST Reforms: Strengthening MSMEs, Entrepreneurship & Rural Community for Atmanirbhar Bharat</h2>
+            <p style="margin-bottom: 1.5rem;">Organized by Department of Commerce & Management, Hemchandracharya North Gujarat University (HNGU), Patan</p>
+            <div class="date-location">
+                📍 Convention Hall, HNGU Patan | 🗓️ 28-29 November 2026
+            </div>
+            <div>
+                <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="cta-btn">Register & Submit Paper →</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">About the Event</h2>
+            <div class="card">
+                <p>This National Conference aims to provide a dynamic platform for academicians, researchers, industry experts, policymakers, professionals, and students to deliberate on emerging GST reforms and their role in advancing Atmanirbhar Bharat and Viksit Bharat 2047.</p>
+                <br>
+                <p>Arranged in collaboration with <strong>Indian Council of Social Science Research (ICSSR), New Delhi</strong>. Knowledge partners include the <strong>Gujarat State Tax Office</strong> and <strong>District Industries Centre (DIC)</strong> of Govt. of Gujarat.</p>
+            </div>
+        </section>
+
+        <!-- Conference Tracks -->
+        <section id="tracks">
+            <h2 class="section-title">Conference Themes & Tracks</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Track I</h3>
+                    <p>Next-Generation GST Reforms and Public Policy</p>
+                </div>
+                <div class="card">
+                    <h3>Track II</h3>
+                    <p>Next-Gen GST Reforms: Atmanirbhar Bharat & Viksit Bharat 2047</p>
+                </div>
+                <div class="card">
+                    <h3>Track III</h3>
+                    <p>Sustainable Development, MSMEs, and Entrepreneurship</p>
+                </div>
+                <div class="card">
+                    <h3>Track IV</h3>
+                    <p>Emerging Issues & Contemporary Research Policy Reforms</p>
+                </div>
+                <div class="card">
+                    <h3>Track V</h3>
+                    <p>Rural Communities, Inclusive Growth & GST Reforms</p>
+                </div>
+                <div class="card">
+                    <h3>Track VI</h3>
+                    <p>Innovation, Emerging Technologies & Future Economy</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Dates -->
+        <section id="dates">
+            <h2 class="section-title">Important Dates</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Milestone</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Paper Submission Opens</td><td>1 August 2026</td></tr>
+                    <tr><td>Abstract Submission Deadline</td><td>30 October 2026</td></tr>
+                    <tr><td>Intimation of Acceptance</td><td>05 November 2026</td></tr>
+                    <tr><td>Full Paper Submission & Registration Deadline</td><td>15 November 2026</td></tr>
+                    <tr><td><strong>Conference Dates</strong></td><td><strong>28-29 November 2026</strong></td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Guidelines -->
+        <section id="guidelines">
+            <h2 class="section-title">Paper Submission Guidelines</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Abstract Submission</h3>
+                    <p>Max 300 words (MS Word) including Title, Author(s), Affiliation, Email, Mobile No., and 4-6 Keywords. Submit abstract to: <a href="mailto:conferencegujarat@gmail.com">conferencegujarat@gmail.com</a></p>
+                </div>
+                <div class="card">
+                    <h3>Full Paper Guidelines</h3>
+                    <p>Max 5,000 words | Font: Times New Roman, 12 pt | Spacing: 1.5 | Style: APA 7th Edition. Upload full paper through the registration link.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Fees -->
+        <section id="fees">
+            <h2 class="section-title">Registration Fees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Presentation / Publication</th>
+                        <th>Attendee Only</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Students & Ph.D Scholars</td>
+                        <td>₹400</td>
+                        <td>₹300</td>
+                    </tr>
+                    <tr>
+                        <td>Academicians & Others</td>
+                        <td>₹800</td>
+                        <td>₹500</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #4a5568;">* Fee includes conference kit, lunch/dinner, certificate, and heritage excursion trip. Accommodation (AC Rooms) available at ₹500/day per person.</p>
+        </section>
+
+        <!-- Contact Information -->
+        <section id="contact">
+            <h2 class="section-title">Organizing Committee & Contact</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Convener & Organizing Secretary</h3>
+                    <p><strong>Dr. Ashwinkumar Modi</strong></p>
+                    <p>Co-Convener: Dr. Dharmendra Thaker</p>
+                    <p>Department of Commerce & Management</p>
+                    <p>Hemchandracharya North Gujarat University, Patan-384265, Gujarat</p>
+                </div>
+                <div class="card">
+                    <h3>Helpline & Queries</h3>
+                    <p><strong>Email:</strong> conferencegujarat@gmail.com</p>
+                    <p><strong>Phone:</strong> +91 99748 70511 / +91 99247 99715</p>
+                    <p><strong>Website:</strong> <a href="https://www.ngu.ac.in" target="_blank">www.ngu.ac.in</a></p>
+                </div>
+            </div>
+        </section>
+
     </div>
-  </section>
 
-  <!-- REGISTRATION, FEES & PAYMENT -->
-  <section class="section" style="background: #F0ECE1;">
-    <h2 class="section-title">Registration & Payment</h2>
-    <div class="grid-2">
-      
-      <div class="card">
-        <h3>1. Registration Fees</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Offline</th>
-              <th>Online</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Students / Scholars</td>
-              <td>₹2,500</td>
-              <td>₹1,100</td>
-            </tr>
-            <tr>
-              <td>Academicians</td>
-              <td>₹3,100</td>
-              <td>₹2,500</td>
-            </tr>
-          </tbody>
-        </table>
-        <p style="margin-top: 10px; font-size: 0.85rem; color: var(--text-muted);">
-          *Accommodation (optional): ₹2,500 extra.
-        </p>
-
-        <div class="payment-box">
-          <h4>Bank Details for Payment (UPI / NEFT)</h4>
-          <p><strong>Account Name:</strong> Principal, VNSB Ltd Arts & Commerce College</p>
-          <p><strong>Bank Name:</strong> </p>
-          <p><strong>Account No:</strong> </p>
-          <p><strong>IFSC Code:</strong> </p>
-          <p><strong>UPI ID:</strong> </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>2. How to Register</h3>
-        <div class="guideline-item">
-          <h5>STEP 1: MAKE PAYMENT</h5>
-          <p>Pay the registration fee using the UPI/Bank details provided on the left. Save the payment screenshot and note the 12-digit UTR/Transaction ID.</p>
-        </div>
-
-        <div class="guideline-item">
-          <h5>STEP 2: FILL REGISTRATION FORM</h5>
-          <p>Click the button below to complete the Google Form, upload your payment screenshot, and submit your paper details.</p>
-        </div>
-
-        <div class="guideline-item">
-          <h5>STEP 3: SUBMIT FULL PAPER</h5>
-          <p>Send your research paper (MS Word) directly to <a href="mailto:accvad2026@gmail.com" style="color:var(--primary); font-weight:600;">accvad2026@gmail.com</a> before September 10, 2026.</p>
-        </div>
-
-        <!-- PASTE YOUR GOOGLE FORM LINK IN THE HREF BELOW -->
-        <a href="https://docs.google.com/spreadsheets/d/1VGfJWD0uDpBS85mdObOUljVcbEfnUWGmimk8g0vigrM/edit?usp=drivesdk" target="_blank" class="cta-btn">
-          Complete Registration & Upload Proof →
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- VENUE & CONTACT -->
-  <section class="section">
-    <h2 class="section-title">Venue & Contact</h2>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Conference Venue</h3>
-        <h4>The Lotus County Club & Resort</h4>
-        <p>Ranpur-Chanrasa, Debari, Badi, Udaipur – 313024, Rajasthan, India</p>
-        <a class="map-btn" href="https://maps.google.com" target="_blank">Get Directions</a>
-      </div>
-
-      <div class="card">
-        <h3>Help & Queries</h3>
-        <p><strong>Paper Submissions:</strong> accvad2026@gmail.com</p>
-        <h4 style="margin-top: 15px;">Helpline Numbers:</h4>
-        <ul class="contact-list">
-          <li><a href="tel:+919737985889">+91 97379 85889</a></li>
-          <li><a href="tel:+919724813483">+91 97248 13483</a></li>
-          <li><a href="tel:+919265644542">+91 92656 44542</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Department of Commerce & Management, HNGU Patan. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
